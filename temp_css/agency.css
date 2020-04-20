@@ -1,12 +1,14 @@
 /*!
- * Start Bootstrap - Agency v5.2.2 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2020 Start Bootstrap
+ * Start Bootstrap - Agency v5.0.4 (https://startbootstrap.com/template-overviews/agency)
+ * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 
+/*body {*/
+  /*overflow-x: hidden;*/
+  /*font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';*/
+/*}*/
 body {
-  overflow-x: hidden;
-  font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   background: #3b3f42;
 }
 
@@ -18,7 +20,9 @@ a {
   color: #262A2D;
   text-decoration: underline;
 }
-
+a.navbar-text{
+  text-decoration: none;
+}
 a:hover {
   color: #fec503;
 }
@@ -51,17 +55,44 @@ section h3.section-subheading {
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
   text-transform: none;
   font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+section h3.interests-subheading {
+  margin-bottom: 50px;
+}
+
+.textful {
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+.picture-small {
+  width: 50%;
+  height: 50%;
+}
+
+.picture-medium {
+  width: 75%;
+  height: 75%;
+}
+hr{
+  width: 7%;
+  border-top: 3px solid;
+  color: #3b3f42;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
   section {
     padding: 100px 0;
   }
-  section.about-me-section {
-    padding-top: 100px;
+  section.about-me-section{
+    padding-top: 150px;
   }
 }
 
@@ -87,21 +118,13 @@ section h3.section-subheading {
 }
 
 .btn-primary:active, .btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
-}
-
-::-moz-selection {
-  background: #fed136;
-  text-shadow: none;
 }
 
 ::selection {
   background: #fed136;
   text-shadow: none;
-}
-
-img::-moz-selection {
-  background: transparent;
 }
 
 img::selection {
@@ -180,10 +203,12 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
+  /*background-image: url("../img/header-bg.jpg");*/
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center top;
-  background-size: 100% 100%;
+  background-size: 100% 100 %;
+
 }
 
 header.masthead .intro-text {
@@ -228,15 +253,54 @@ header.masthead .intro-text .intro-heading {
   }
 }
 
+.portfolio-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: white;
+
+}
+.about-me p {
+  font-size: 1.2em;
+  color: #565d64;
+  line-height: 1.7;
+
+}
+
+.skills-text {
+  font-size: 1.2em;
+  color: #262A2D;
+  line-height: 1.5;
+}
+
 .service-heading {
   margin: 15px 0;
-  text-transform: none;
   font-size: 1.4em;
+  text-transform: none;
+}
+
+.about-me-section {
+  background-color: white;
+}
+
+.bg-light-teal{
+  background-color: #f3f7f7;
+}
+
+.bg-light-magenta{
+  background-color: #f3f3f7;
+}
+
+.bg-light-green{
+  background-color: #f3f7f3;
 }
 
 #portfolio .portfolio-item {
   right: 0;
   margin: 0 0 15px;
+  height: 380px;
+  width: 365px;
+  
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -310,8 +374,6 @@ header.masthead .intro-text .intro-heading {
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
-    height: 380px;
-    width: 365px;
   }
 }
 
@@ -380,7 +442,6 @@ header.masthead .intro-text .intro-heading {
   margin-left: 35px;
   /* IE 9 */
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   background-color: #212529;
 }
@@ -392,7 +453,6 @@ header.masthead .intro-text .intro-heading {
   height: 75px;
   /* IE 9 */
   -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   background-color: #212529;
 }
@@ -584,17 +644,16 @@ header.masthead .intro-text .intro-heading {
 }
 
 .team-member {
+  margin-bottom: 20px;
+  margin-left: 30px;
   text-align: center;
-  padding: 20px 0px;
 }
 
 .team-member img {
-  width: 275px;
-  height: 275px;
-  border: 4px solid #3b3f42;
+  width: 375px;
+  height: 375px;
+  border: 8px solid #3b3f42;
   border-radius: 100%;
-  float: left;
-  margin: 20px 40px 20px 20px !important;
 }
 
 .team-member h4 {
@@ -608,7 +667,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 section#contact {
-  background-color: #212529;
+  background-color: #3b3f42;
   background-image: url("../img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -637,6 +696,7 @@ section#contact .form-group textarea.form-control {
 
 section#contact .form-control:focus {
   border-color: #fed136;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -664,10 +724,16 @@ section#contact :-ms-input-placeholder {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+section h3.contact-text{
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
 footer {
   padding: 25px 0;
   text-align: center;
 }
+
 
 footer span.copyright {
   font-size: 90%;
@@ -706,61 +772,3 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-color: #fed136;
 }
 
-.textful {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.picture-small {
-  width: 50%;
-  height: 50%;
-}
-
-.picture-medium {
-  width: 75%;
-  height: 75%;
-}
-
-hr {
-  width: 7%;
-  border-top: 3px solid;
-  color: #3b3f42;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-
-.portfolio-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background-color: white;
-}
-
-.about-me p {
-  font-size: 1.2em;
-  color: #565d64;
-  line-height: 1.7;
-  text-align: left;
-}
-
-.skills-text {
-  font-size: 1.2em;
-  color: #262A2D;
-  line-height: 1.5;
-}
-
-.about-me-section {
-  background-color: white;
-}
-
-.bg-light-teal {
-  background-color: #f3f7f7;
-}
-
-.bg-light-magenta {
-  background-color: #f3f3f7;
-}
-
-.bg-light-green {
-  background-color: #f3f7f3;
-}
